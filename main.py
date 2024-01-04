@@ -16,7 +16,7 @@ import streamlit as st
 from PIL import Image
 
 
-
+# This is stremlet for graphical user interface
 import streamlit as st
 
 
@@ -110,6 +110,10 @@ if __name__ == "__main__":
             print("Hello")
             speak("Hello")
 
+        elif "who is kushal" in query:
+            print("kushal is btech 1st year student")
+            speak("kushal is btech 1st year student")
+            
         elif "who is maaz" in query:
             print("maaz is btech 1st year student")
             speak("maaz is btech 1st year student")
@@ -121,10 +125,6 @@ if __name__ == "__main__":
         elif "who is anshu" in query:
             print("anshu is btech 1st year student ")
             speak("anshu is btech 1st year student")
-
-        elif "who is kushal" in query:
-            print("kushal is btech 1st year student")
-            speak("kushal is btech 1st year student")
         
         elif "Prateesh Rawat" in query:
             print("did you mean")
@@ -198,18 +198,21 @@ if __name__ == "__main__":
             print("look at yourself in mirror")
             speak("look at yourself in mirror")
             os.startfile("C:\\Users\\91909\\Pictures\\meme")
-        
+
+       # This give the current position of you curcor in coordinate (x,y)
         elif "coordinates of mouse" in query:
              print("wait a moment sir")
              speak("wait a moment sir")
              print(p.position())
              speak(p.position())
-
+            
+        # This is for controleing funtion of your mouse by capturing your hand movement.
         elif "open mouse" in query:
             query.lower()
             os.startfile("virtual\main.py")
             break
 
+        # for playing games without using your keyboard and mouse
         elif "open game" in query:
             os.startfile("virtual\\controller.py")
             
@@ -300,6 +303,7 @@ if __name__ == "__main__":
             os.startfile("C:\\Users\\91909\\Music\\Agar Tum Saath Ho(PagalWorld.com.se).mp3")
             break    
 
+        # Calculater 
         elif "table of" in query:
             inp = query.replace("table of","")
             inp = int(inp)          
@@ -453,7 +457,7 @@ if __name__ == "__main__":
         
 
         
-
+        # Save our all conversation 
         with open("db.txt","a")as f:
             f.write(query)
             f.write("\n")
